@@ -1,9 +1,0 @@
-@import "../mixer.scss";
-div {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
-  @include borderRadius;
-}

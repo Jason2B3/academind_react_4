@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from "./Card";
-import "./EntryList.scss";
+import Card from "../Card";
+import styles from "./EntryList.scss";
 
 const EntryList = (props) => {
   const profiles = [
