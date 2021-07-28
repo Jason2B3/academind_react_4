@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import "../mixer.scss";
+ul {
+  list-style-type: none; // remove bullets
+  width: 100%;
+}
+li {
+  @include smallMargin;
+  @include grayBorder;
+  padding: 5px;
+  // Style text within each list item
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}

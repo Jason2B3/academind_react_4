@@ -1,0 +1,12 @@
+@import "../../mixer.scss";
+.container {
+  display: flex;
+  // justify-content: center;
+}
+input {
+  @include grayBorder;
+ 
+}
+label {
+  
+}

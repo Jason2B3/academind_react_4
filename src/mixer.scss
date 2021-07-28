@@ -1,0 +1,17 @@
+@mixin purple {
+  background-color: #401434;
+}
+@mixin grayBorder {
+  border: 2px solid rgb(211, 208, 208);
+}
+@mixin smallMargin {
+  margin: 10px;
+}
+@mixin modalText {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+@mixin borderRadius {
+  border-radius: 10px;
+}

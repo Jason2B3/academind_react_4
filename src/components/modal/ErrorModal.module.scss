@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import "../../mixer.scss";
+
+.head {
+  margin: 0px;
+  padding: 20px;
+  @include purple;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #c4c2c4; /*@change later*/
+  overflow-x: hidden;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75); /*Modal color only*/
+}
+
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 50%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
+
+.advisory {
+  display: flex;
+  flex-wrap: wrap;
+}
+.advisory p {
+  width: 100%;
+  @include modalText;
+  margin: 20px;
+}
+.advisoryBtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.advisoryBtn button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  @include modalText;
+  @include purple;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+}
