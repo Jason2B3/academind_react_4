@@ -1,17 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import "../mixer.scss";
-/*
-ul {
+* {
+  //$ Start CSS by Resetting Styles
+  margin: 0;
+  padding: 0;
+}
+
+.list {
   list-style-type: none; // remove bullets
-  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-li {
-  @include smallMargin;
+.list > li:first-child {
+  margin-top: 10px;
+}
+.list > li {
   @include grayBorder;
-  padding: 5px;
-  // Style text within each list item
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
+  @include tinyMarginBottom;
+  padding-inline-start: 0px;
+  padding: 2px;
+  font-size: 14px;
 }
-*/
+
+.list > li:last-child {
+  margin-bottom: 10px;
+}

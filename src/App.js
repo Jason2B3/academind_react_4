@@ -8,15 +8,17 @@ import DataForm from "./components/DataForm";
 import Card from "./Card";
 import styles from "./App.module.scss";
 
-
-
 function App(props) {
   return (
+    /*
+    <ErrorModal></ErrorModal> 
+    */
+    
     <div className={styles.holdAll}>
-      <DataForm></DataForm>
-      <EntryList></EntryList>
-      <ActivateSight />
+      <DataForm className={styles.child}></DataForm>
+      <EntryList className={styles.child}></EntryList>
     </div>
+    
   );
 }
 

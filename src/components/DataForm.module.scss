@@ -1,1 +1,30 @@
 @import "../mixer.scss";
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  @include smallMargin;
+}
+.label1 {
+  @include standardText;
+  margin-bottom: 5px;
+}
+.label2 {
+  @include standardText;
+  margin-top: 5px;
+  @include tinyMarginBottom;
+}
+.label2 + input {
+  @include tinyMarginBottom;
+}
+.btn {
+  width: 15%;
+  padding: 4px;
+  color: white;
+  @include purple;
+}
+
+@media (max-width: 670px) {
+  .btn {
+    width: 100%;
+  }
+}

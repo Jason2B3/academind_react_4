@@ -1,4 +1,4 @@
-import styles from './ErrorModal.module.scss'
+import styles from "./ErrorModal.module.scss";
 const ErrorModal = (props) => {
   return (
     <div className={styles.backdrop}>
