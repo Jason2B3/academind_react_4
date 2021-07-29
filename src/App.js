@@ -21,9 +21,9 @@ function App(props) {
     setModalOn(true);
   };
   //% Exit modal if someone clicks the backdrop, OK button, or ESC
-  const exitModal= function(){
+  const exitModal = function () {
     setModalOn(false); // set up by passing ƒ() to <ErrorModal>
-  }
+  };
   //% Render new data in EntryList.js if we get good field data from DataForm.js
   const [profileArray, setProfileArray] = useState(profiles);
   const addToList = function (username, age) {
@@ -34,16 +34,35 @@ function App(props) {
     });
   };
   //% JSX (Conditional)
-  if (modalOn) return <ErrorModal exitModal={exitModal}/>;
+  if (modalOn) {
+    return (
+      <div className={styles.holdAll}>
+        <DataForm
+          addToList={addToList}
+          modalOn={modalOn}
+          renderModal={renderModal}
+          className={styles.child}
+        ></DataForm>
+        <EntryList
+          className={styles.child}
+          profileArray={profileArray}
+        ></EntryList>
+        <ErrorModal exitModal={exitModal}></ErrorModal>;
+      </div>
+    );
+  }
   return (
     <div className={styles.holdAll}>
       <DataForm
-      addToList={addToList}
+        addToList={addToList}
         modalOn={modalOn}
         renderModal={renderModal}
         className={styles.child}
       ></DataForm>
-      <EntryList className={styles.child} profileArray={profileArray}></EntryList>
+      <EntryList
+        className={styles.child}
+        profileArray={profileArray}
+      ></EntryList>
       <ActivateSight></ActivateSight>
     </div>
   );
